@@ -1,18 +1,17 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
-  </div>
+  <v-app>
+    <router-link to="/page1">Page 1</router-link>
+    <router-link to="/page2">Page 2</router-link>
+    <router-view></router-view>
+  </v-app>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
-export default Vue.extend({
-  name: 'Home',
-  components: {
-    HelloWorld,
+import { defineComponent } from "@vue/composition-api";
+export default defineComponent({
+  name: "App",
+  setup() {
+    return {};
   },
 });
 </script>
